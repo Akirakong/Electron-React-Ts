@@ -25,6 +25,7 @@ npm install
 Start Development Server
 
 # Launch the application in development mode
+num run build
 npm run dev
 
 Build
@@ -89,6 +90,7 @@ npm install
 ### 開発サーバーの起動
 
 ```bash
+num run build
 # アプリケーションの開発モードでの起動
 npm run dev
 ```
