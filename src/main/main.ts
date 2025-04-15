@@ -1,6 +1,22 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 
+// 開発モードの場合、electron-reloaderを使用して自動リロードを有効にする
+if (process.env.NODE_ENV === 'development') {
+  try {
+    require('electron-reloader')(module, {
+      watchRenderer: true,
+      ignore: [
+        /node_modules/,
+        /dist/,
+      ]
+    });
+    console.log('Electron Reloader activated');
+  } catch (err) {
+    console.error('Electron Reloader failed:', err);
+  }
+}
+
 let mainWindow: BrowserWindow | null = null;
 
 function createWindow() {

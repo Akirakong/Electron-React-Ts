@@ -6,7 +6,7 @@ const App: React.FC = () => {
   return (
     <div style={{ padding: "20px", textAlign: "center" }}>
       <h1>Electron + React + TypeScript</h1>
-      <p>アプリケーション開発環境のサンプル</p>
+      <p>アプリケーション開発環境のサンプルです</p>
 
       <div style={{ marginTop: "20px" }}>
         <p>カウンター: {count}</p>

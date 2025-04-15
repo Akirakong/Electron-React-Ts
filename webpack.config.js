@@ -27,4 +27,9 @@ module.exports = {
       template: './src/renderer/index.html',
     }),
   ],
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000,
+    ignored: /node_modules/
+  }
 };

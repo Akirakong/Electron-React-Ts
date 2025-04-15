@@ -7,7 +7,7 @@
     "start": "npm run build && electron .",
     "build": "webpack --config webpack.config.js && tsc -p tsconfig.json",
     "watch": "webpack --config webpack.config.js --watch",
-    "dev": "concurrently \"npm run watch\" \"electron .\""
+    "dev": "concurrently \"npm run watch\" \"cross-env NODE_ENV=development electron .\""
   },
   "keywords": [
     "electron",
@@ -20,7 +20,9 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
     "electron": "^25.0.0",
+    "electron-reloader": "^1.2.3",
     "html-webpack-plugin": "^5.5.3",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
